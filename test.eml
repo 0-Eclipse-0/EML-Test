@@ -1,30 +1,32 @@
-open.HTML
+open.EML
  comment.ADD ':Test:'
- html.HEAD :OPEN:
+ eml.HEAD :OPEN:
   site.TITLE ':Test:'
   ext.StyleSheet <CSS> ':test.css:'
   ext.JS ':test.js:'
-  tag.SCRIPT.OPEN
-  tag.SCRIPT.CLOSE
- html.HEAD :CLOSE:
- comment.ADD ':Test:'
- html.BODY :OPEN:
-  tag.DIV.OPEN
-   tag.HEADER.1 ':Test:'
-   tag.BR
-   tag.HEADER.2 ':Test:'
-   tag.BR
-   tag.HEADER.3 ':Test:'
-   tag.BR
-   tag.HEADER.4 ':Test:'
-   tag.BR
-   tag.HEADER.5 ':Test:'
-   tag.BR
-   tag.HEADER.6 ':Test:'
-  tag.DIV.CLOSE
-  tag.DIV.OPEN
-   tag.HEADER.1 ':Test:'
-   tag.P ':Test:'
-  tag.DIV.CLOSE
- html.BODY :CLOSE:
-close.HTML
+  !---
+  ---!
+ eml.HEAD :CLOSE:
+ eml.BASE :OPEN:
+  Section.OPEN
+   1> ':Test:'
+   tag.Break
+   2> ':Test:'
+   tag.Break
+   3> ':Test:'
+   tag.Break
+   4> ':Test:'
+   tag.Break
+   5> ':Test:'
+   tag.Break
+   6> ':Test:'
+  Section.CLOSE
+  Section.OPEN
+   Center.OPEN
+    1> ':Test:'
+    PGH ':Test:'
+    BOLD ':Test:'
+   Center.CLOSE
+  Section.CLOSE
+ eml.BASE :CLOSE:
+close.EML
