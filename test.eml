@@ -1,50 +1,19 @@
-open.EML
- comment.ADD ':Test:'
- eml.HEAD :OPEN:
-  site.TITLE ':Test:'
-  ext.StyleSheet <CSS> ':test.css:'
-  ext.JS ':test.js:'
-  !---
-  ---!
- eml.HEAD :CLOSE:
- eml.BASE :OPEN:
-  Section.OPEN
-   1> ':Test:'
-   line.Break
-   line.Sep
-   2> ':Test:'
-   line.Break
-   line.Sep
-   3> ':Test:'
-   line.Break
-   line.Sep
-   4> ':Test:'
-   line.Break
-   line.Sep
-   5> ':Test:'
-   line.Break
-   line.Sep
-   6> ':Test:'
-  Section.CLOSE
-  Section.OPEN
-   Center.OPEN
-    1> ':Test:'
-    PGH ':Test:'
-    BOLD ':Test:'
-   Center.CLOSE
-  Section.CLOSE
-  Section.OPEN
-   Center.OPEN
-    text.BD.OPEN
-     PGH ':Test:'
-    text.BD.CLOSE
-    text.IT.OPEN
-     PGH ':Test:'
-    text.IT.CLOSE
-    text.SS.OPEN
-     PGH ':Test:'
-    text.SS.CLOSE
-   Center.CLOSE
-  Section.CLOSE
- eml.BASE :CLOSE:
-close.EML
+&setDoctype <html>
+::::open.EML:::: {
+ :::open.Head::: {
+  !include :StyleSheet: :CSS: <style.css>
+  &setTitle <'Eclipse'>
+  &setMData :charset: <'UTF-8'>
+ } :::close.Head:::
+ :::open.Base::: {
+  ::open.Div:: @classTrue :header: {
+   heading.New :1: <'Eclipse'>
+  } ::close.Div::
+  ::open.Div:: @classTrue :base: {
+   pgh.New :pre: <'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+  } ::close.Div::
+  ::open.Div:: @classTrue :footer: {
+   heading.New :3: <'Created by 0-Eclipse-0'>
+  } ::close.Div::
+ } :::close.Base:::
+} ::::close.EML::::
